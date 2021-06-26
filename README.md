@@ -4,7 +4,7 @@ Week 16 D3 Homework
 > Created by Dale Currigan  
 > June 2021  
   
-![D3](/Images/giphy/gif)  
+![D3](/Images/giphy.gif)  
 
 ## Table of contents  
 * [Project Intro](#Project-Intro)  
