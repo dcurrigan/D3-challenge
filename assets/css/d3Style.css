@@ -42,7 +42,7 @@
 
 .d3-tip {
   padding: 6px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1;
   line-height: 1.5em;
   color: #fff;
@@ -50,7 +50,11 @@
   text-transform: capitalize;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 4px;
+  line-height: 1em;
+  /* this stops the flickering on-and-off with mouse move */
+  /* pointer-events: none!important; */
 }
+
 
 /* Mobile Rules */
 @media screen and (max-width: 530px) {
@@ -68,3 +72,4 @@
     font-size: 13px;
   }
 }
+
