@@ -64,6 +64,7 @@ I've created an interactive web visualisation using D3 to explore the US Census 
   
 ![D3](/Images/d3.gif)  
   
+  
 Example code sourced <a href="https://bl.ocks.org/starcalibre/6cccfa843ed254aa0a0d">here</a> provided the basis for the colour scaling and legend. The data points are coloured based upon the scale generated with scaleQuantize(), which allows scaling of a numerical value in the domain to a string (the colour hex value) in the range.    
   
 **Example Code:** Creating a colour scale 
@@ -75,6 +76,7 @@ Example code sourced <a href="https://bl.ocks.org/starcalibre/6cccfa843ed254aa0a
 
   };
 ```
+  
   
 # Sources
 |No|Source|Link|
