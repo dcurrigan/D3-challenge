@@ -30,25 +30,31 @@ D3-challenge
 |    
 |__ index.html                          # The site landing page html doc
 |__ README.md                           # This file
-|__ samples.json                        # The Bellybutton Biodiversity dataset 
 |
 |__ static/                              
 |   |__css/                             # Directory for css stylesheets
-|   |  |__ styles.css                              
-|   |    
+|   |  |__ d3Style.css                              
+|   |  |__ style.css                              
+|   |
+|   |__data/                            # Directory for the census data
+|   |  |__ data.csv
+|   | 
 |   |__js/                              # Directory for javscript code
 |      |__ app.js
+|      |__ eslintrc.json
 |      
 |__ Images/                             # Directory for image files
-|   |__ microbes.jpg
-|   |__ capture.jpg
-|   |__ polar_coordinates.gif
+|   |__ d3.gif
+|   |__ capture.png
+|   |__ giphy.gif
+|   |__ newspaper.svg
+
 |
 ``` 
   
 # Setup 
   
-* The site is can be accessed at: https://dcurrigan.github.io/plotly-challenge/
+* The site is can be accessed at: https://dcurrigan.github.io/D3-challenge/
 * The html for the site is all contained in index.html
 * All styles are contained within static/css/style.css
 * The javascript code enabling the functionality of the site is can be found within static/js/app.js
@@ -87,8 +93,8 @@ where the radius is the needle length
 # Sources
 |No|Source|Link|
 |-|-|-|
-|1|Belly Button Biodiversity                |http://robdunnlab.com/projects/belly-button-biodiversity/| 
-|2|Calculus - Polar Coordinates             |https://tutorial.math.lamar.edu/classes/calcii/polarcoordinates.aspx|
+|1|United States Census Beureau            |https://data.census.gov/cedsci/| 
+|2|Dynamic Colour Scale Legend             |https://bl.ocks.org/starcalibre/6cccfa843ed254aa0a0d|
 
    
 # Contributors  
