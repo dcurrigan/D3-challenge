@@ -10,6 +10,7 @@
   
 </head>
 
+<!-- Page header -->
 <body>
   <div class="container">
     <div class="row">
@@ -26,8 +27,12 @@
         
       </div>
     </div>
-    <div class = "row">
-      <div class="col-12">
+  </div>
+
+  <!-- The dropdown menu -->
+  <div class="container">
+    <div class = "row justify-content-center">
+      <div class="col-12 align-items-center">
         <div id="controls" class="text-center">
           <label for="scale-select"><strong>Colour Scale: &nbsp;</strong></label>
           <select id="scale-select">
@@ -38,27 +43,31 @@
               <option value="smokes">Smokes</option>
               <option value="obesity">Obesity</option>
           </select>
-      </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12  col-md-9">
-          <div id="scatter"></div>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-xs-12  col-md-9 align-items-center">
-        <div class="article ">
-          <h2>Correlations Discovered Between Health Risks and Age, Income</h2>
-          <p>Recent data from the <a href="https://data.census.gov/cedsci/">U.S. Census Bureau</a> and the Behavioral Risk Factor Surveillance System has revealed the many factors that contribute to our health and quality of life. The interactive data visualisation above utilises the 2014 dataset and shows just some of the the many interesting correlations seen in the data.</p>
-
-          <p>States with higher rates of poverty, also had higher rates of health issues like obesity and were more liekly to be smokers. States with a lower median household income displayed a similar rates of smoking and obesity. Other factors, like median age, appeared to be less correlated with such outcomes.</p>
-            
-          <p>To investigate the data further the chart above can be manipulated by clicking on the axis-labels to see how the variables are correlated with one another. The colour scale for the visualisation can also be changed via the drop down menu at the top to add a third dimension to the data. Hover your mouse over each state to see the individual data. For more on US census data visist the <a href="https://data.census.gov/cedsci/">United States Census Bureau.</a></p>
-
         </div>
       </div>
     </div>
+  </div>
+  
+  <!-- The visualisation -->
+  <div class="col-12 align-items-center" id="svg-div">
+     <div id="scatter"></div>
+  </div>
+
+
+  <div class="container">  
+    <div class="row justify-content-center">
+        <div class="col-xs-12  col-md-9 align-items-center">
+          <div class="article ">
+            <h2>Correlations Discovered Between Health Risks and Age, Income</h2>
+            <p>Recent data from the <a href="https://data.census.gov/cedsci/">U.S. Census Bureau</a> and the Behavioral Risk Factor Surveillance System has revealed the many factors that contribute to our health and quality of life. The interactive data visualisation above utilises the 2014 dataset and shows just some of the the many interesting correlations seen in the data.</p>
+
+            <p>States with higher rates of poverty, also had higher rates of health issues like obesity and were more liekly to be smokers. States with a lower median household income displayed a similar rates of smoking and obesity. Other factors, like median age, appeared to be less correlated with such outcomes.</p>
+              
+            <p>To investigate the data further the chart above can be manipulated by clicking on the axis-labels to see how the variables are correlated with one another. The colour scale for the visualisation can also be changed via the drop down menu at the top to add a third dimension to the data. Hover your mouse over each state to see the individual data. For more on US census data visist the <a href="https://data.census.gov/cedsci/">United States Census Bureau.</a></p>
+
+          </div>
+        </div>
+      </div>
   </div>
 
   <!-- Footer-->

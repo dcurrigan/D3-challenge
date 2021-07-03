@@ -78,6 +78,12 @@ h1 {
     padding-top: 20px;
   }
 
+#svg-div {
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
+
 .head-img {
   width: 150px;
   height: 150px;
