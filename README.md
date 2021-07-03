@@ -4,7 +4,7 @@ Week 16 D3 Homework
 > Created by Dale Currigan  
 > June 2021  
   
-![D3](/Images/giphy.gif)  
+![D3](/Images/Capture.png)  
 
 ## Table of contents  
 * [Project Intro](#Project-Intro)  
@@ -30,65 +30,59 @@ D3-challenge
 |    
 |__ index.html                          # The site landing page html doc
 |__ README.md                           # This file
-|__ samples.json                        # The Bellybutton Biodiversity dataset 
 |
 |__ static/                              
 |   |__css/                             # Directory for css stylesheets
-|   |  |__ styles.css                              
-|   |    
+|   |  |__ d3Style.css                              
+|   |  |__ style.css                              
+|   |
+|   |__data/                            # Directory for the census data
+|   |  |__ data.csv
+|   | 
 |   |__js/                              # Directory for javscript code
 |      |__ app.js
+|      |__ eslintrc.json
 |      
 |__ Images/                             # Directory for image files
-|   |__ microbes.jpg
-|   |__ capture.jpg
-|   |__ polar_coordinates.gif
+|   |__ d3.gif
+|   |__ capture.png
+|   |__ giphy.gif
+|   |__ newspaper.svg
 |
 ``` 
   
 # Setup 
   
-* The site is can be accessed at: https://dcurrigan.github.io/plotly-challenge/
+* The site is can be accessed at: https://dcurrigan.github.io/D3-challenge/
 * The html for the site is all contained in index.html
-* All styles are contained within static/css/style.css
+* All styles are contained within static/css/D3style.css and style.css
 * The javascript code enabling the functionality of the site is can be found within static/js/app.js
-* The base dataset is found within samples.json   
+* The base dataset is found within data.csv   
 
 # Design 
-I've created an interactive dashboard that allows the user to explore the <a href="http://robdunnlab.com/projects/belly-button-biodiversity/">Bellybutton Biodiversity dataset. </a>. The user can select one of the test subject from the drop down menu and see that subjects data displayed in various visualisation.  
+I've created an interactive web visualisation using D3 to explore the US Census Bureau data. <a href="https://data.census.gov/cedsci/">US Census Bureau data</a>. An interactive scatter plot has been generated with the data, allowing the user to investigate the data further by changing axes or the colour scale for the chart (see below).  
   
-![D3](/Images/Capture.png)  
+![D3](/Images/d3.gif)  
   
-D3 and plotly were used to select and re-render page elements on chnage of dropdown menu item. D3.json() method was used to fetch the data, after which it could be filtered, mapped and sliced as required for Demographics Box, Bar Chart, Bubble Chart and Guage Chart.    
   
-**Example:** Filter, Slice and Map to obtain the Top 10 sample_values, OTU_ID's and OTU_labels for the Bar chart
+Example code sourced <a href="https://bl.ocks.org/starcalibre/6cccfa843ed254aa0a0d">here</a> provided the basis for the colour scaling and legend. The data points are coloured based upon the scale generated with scaleQuantize(), which allows scaling of a numerical value in the domain to a string (the colour hex value) in the range.    
+  
+**Example Code:** Creating a colour scale 
 ```
-samples = baseData.samples.filter(subject => subject.id == selected)[0];
-        
-        sample_values  = samples.sample_values.slice(0, 10);
-        otu_ids = samples.otu_ids.slice(0,10)
-        otu_ids = otu_ids.map(id => "OTU-"+id)
-        otu_labels = samples.otu_labels.slice(0,10)
-```
-  
-The guage chart used the in-build Plotly Guage-mode indicator chart, but with the addition of a needle plotted as a second trace. This required application of some basic principles of trigonometry to determine the x and y coordinates of of the needle for each point on the guage. 
-  
-![D3](/Images/polar_coordinates.gif)  
+  function colour_scaler(data) {
+    return d3.scaleQuantize()
+      .domain([(d3.min(censusData, d => d[data])), (d3.max(censusData, d => d[data]))])  
+      .range(['#E7F1D7', '#D0E7BD', '#B2DDA3', '#8FD28A', '#71C67B', '#59BA76', '#41ae76', '#379A7C', '#2E857E', '#256770', '#1D465B'])
 
+  };
+```
   
-Using the principle above:
-```
-x coordinate = radius x cos θ
-y coordinate = radius x sin θ
-
-where the radius is the needle length
-```
-
+  
 # Sources
 |No|Source|Link|
 |-|-|-|
-|1|Belly Button Biodiversity                |http://robdunnlab.com/projects/belly-button-biodiversity/| 
-|2|Calculus - Polar Coordinates             |https://tutorial.math.lamar.edu/classes/calcii/polarcoordinates.aspx|
+|1|United States Census Beureau            |https://data.census.gov/cedsci/| 
+|2|Dynamic Colour Scale Legend             |https://bl.ocks.org/starcalibre/6cccfa843ed254aa0a0d|
 
    
 # Contributors  
