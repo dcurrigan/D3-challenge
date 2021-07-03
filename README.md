@@ -48,7 +48,6 @@ D3-challenge
 |   |__ capture.png
 |   |__ giphy.gif
 |   |__ newspaper.svg
-
 |
 ``` 
   
