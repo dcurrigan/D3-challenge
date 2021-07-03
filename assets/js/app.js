@@ -82,7 +82,7 @@ function makeResponsive() {
           return d3.scaleQuantize()
             .domain([(d3.min(censusData, d => d[data])), (d3.max(censusData, d => d[data]))])  
             .range(['#E7F1D7', '#D0E7BD', '#B2DDA3', '#8FD28A', '#71C67B', '#59BA76', '#41ae76', '#379A7C', '#2E857E', '#256770', '#1D465B'])
-            // .range(['#1D465B', '#256770', '#2E857E', '#379A7C', '#41ae76', '#59BA76', '#71C67B', '#8FD28A', '#B2DDA3', '#D0E7BD', '#E7F1D7'])
+
         };
         
         // returns scale for the legend colourbar
